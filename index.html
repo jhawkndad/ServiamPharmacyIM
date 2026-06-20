@@ -1,8 +1,10 @@
-<script>
+<!-- SAFE Zoho SalesIQ loader (prevents blank page) -->
+<script type="text/javascript">
 window.$zoho = window.$zoho || {};
 $zoho.salesiq = $zoho.salesiq || {
+  mode: "async",
   ready: function() {}
 };
 </script>
 
-<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget" defer></script>
+<script type="text/javascript" id="zsiqscript" defer src="https://salesiq.zohopublic.com/widget"></script>
