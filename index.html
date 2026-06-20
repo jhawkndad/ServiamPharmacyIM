@@ -1,9 +1,8 @@
 <script>
-window.ZOHOIM = window.ZOHOIM || function(a, b) {
-  ZOHOIM[a] = b;
+window.$zoho = window.$zoho || {};
+$zoho.salesiq = $zoho.salesiq || {
+  ready: function() {}
 };
-
-window.ZOHOIM.prefilledMessage = "Hello, I need pharmacy assistance.";
 </script>
 
-<script defer src="https://im.zohopublic.com/api/v1/public/channel/135f15cb2ee25d56adda9a7715d5acb5/widget"></script>
+<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget" defer></script>
