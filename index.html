@@ -2,22 +2,210 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Division Chat</title>
+  <title>Serviam Internal Chat</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 20px;
+      background-color: #f4f4f4;
       color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 2px solid #ddd;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    header img {
+      height: 60px;
+      object-fit: contain;
+    }
+
+    header h1 {
+      font-size: 22px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 32px auto;
+      padding: 0 24px;
+    }
+
+    .welcome-box {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .welcome-box h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .welcome-box p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .instructions {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .instructions h2 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+
+    .divisions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .division-card {
+      flex: 1;
+      min-width: 220px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .division-card h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .division-card ul {
+      padding-left: 18px;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .links-box {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .links-box h2 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+
+    .links-grid {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .link-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0078d4;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    .link-btn:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: #999;
     }
   </style>
 </head>
 <body>
 
-  <h1>Division Chat</h1>
+  <header>
+    <img src="ServiamLogo.jpg" alt="Serviam Logo" />
+    <h1>Serviam Internal Communications</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="welcome-box">
+      <h2>Welcome to the Serviam Staff Chat</h2>
+      <p>
+        This page is your direct line of communication between the 
+        <strong>Pharmacy Division</strong> and <strong>Caregiver Staff</strong>. 
+        Use the chat window to coordinate care, ask questions, and share 
+        updates in real time. No Microsoft Teams license is required — 
+        just open this page in any browser.
+      </p>
+    </div>
+
+    <div class="instructions">
+      <h2>How to use this chat</h2>
+      <div class="divisions">
+        <div class="division-card">
+          <h3>💊 Pharmacy Division</h3>
+          <ul>
+            <li>Use chat to confirm medication orders</li>
+            <li>Notify caregivers of prescription updates</li>
+            <li>Flag urgent medication changes immediately</li>
+            <li>Keep messages clear and concise</li>
+          </ul>
+        </div>
+        <div class="division-card">
+          <h3>🤝 Caregiver Staff</h3>
+          <ul>
+            <li>Use chat to request medication information</li>
+            <li>Report patient medication concerns</li>
+            <li>Confirm delivery and administration times</li>
+            <li>Escalate urgent issues immediately</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="links-box">
+      <h2>Internal tools and resources</h2>
+      <div class="links-grid">
+        <a href="#" class="link-btn">SharePoint Intranet</a>
+        <a href="#" class="link-btn">Zoho Desk Portal</a>
+        <a href="#" class="link-btn">Staff Directory</a>
+        <a href="#" class="link-btn">HR Resources</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Serviam &mdash; Internal use only
+  </footer>
 
   <script type='text/javascript'>
     window.ZOHOIM=window.ZOHOIM||function(a,b){ZOHOIM[a]=b;};
@@ -26,9 +214,8 @@
       var d=document;
       var s=d.createElement('script');
       s.type='text/javascript';
-      s.nonce='{place_your_nonce_value_here}';
       s.defer=true;
-      s.src="https://im.zoho.com/api/v1/public/channel/8ce939b973b05563a27454b6d9e7216c/widget";
+      s.src="https://im.zoho.com/api/v1/public/channel/135f15cb2ee25d56adda9a7715d5acb5/widget";
       d.getElementsByTagName('head')[0].appendChild(s);
     })()
   </script>
